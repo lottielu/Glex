@@ -159,6 +159,24 @@ int main(int argc, char ** argv) {
       break;
     case SDL_USEREVENT:
       Draw(window, game_world);
+    case SDL_KEYDOWN:
+	switch (event.key.keysym.sym)
+	{
+	case SDLK_w:
+		std::cout<<"w was pressed"<<std::endl;
+		break;
+	case SDLK_s:
+		std::cout<<"s was pressed"<<std::endl;
+		break;
+	case SDLK_a:
+		std::cout<<"a was pressed"<<std::endl;
+		break;
+	case SDLK_d:
+		std::cout<<"d was pressed"<<std::endl;
+		break;
+	default:
+	break;
+	};
 
       break;
     default:
