@@ -4,6 +4,7 @@ in vec3 position;
 
 out vec3 frag_color;
 uniform mat4 model;
+in vec3 colour;
 
 mat4 projection(
     float angle_of_view_y,
@@ -41,8 +42,9 @@ mat4 rotate_x(float theta)
 
 void main() {
       gl_Position = projection(radians(45.0), 4.0/3.0, -0.1, -1000.0)
-                      * translate(0.0, 0.0, -2.0)
+                      * translate(-3.0,-5.0, -10.0)
                       * model
                       * vec4(position, 1.0f);
-      frag_color = vec3(1.0, 0.0, 1.0); // white
+      frag_color = colour;
+      //vec3(1.0, 0.0, 1.0); // white
 }

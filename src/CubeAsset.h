@@ -11,7 +11,7 @@
 
 class CubeAsset : public GameAsset {
  public:
-  CubeAsset();
+  CubeAsset(float x, float y, float z);
   ~CubeAsset();
   virtual void Draw(GLuint);
   void rotateX(float);
@@ -20,6 +20,8 @@ class CubeAsset : public GameAsset {
   GLuint element_buffer_length;
   GLuint vertex_buffer_token, element_buffer_token;
   glm::mat4 model_matrix;
+  GLuint colour_buffer_length;
+  GLuint colour_buffer_token;
 };
 
 #endif // CUBEASSET_H
