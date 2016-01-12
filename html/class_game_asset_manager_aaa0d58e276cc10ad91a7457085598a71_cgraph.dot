@@ -1,0 +1,13 @@
+digraph "GameAssetManager::GameAssetManager"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="GameAssetManager::GameAsset\lManager",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node2 [label="GameAssetManager::Create\lGLProgram",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_game_asset_manager.html#abec45b44a8b35ad2d7d817ba10e0dd8d"];
+  Node2 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node3 [label="GameAssetManager::Create\lGLESShader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_game_asset_manager.html#a1a1e5c07f941e8d3fda40d9442ac7037"];
+  Node3 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
+  Node4 [label="GameAssetManager::ReadShader",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_game_asset_manager.html#a23b124a213308a68a882727127601c97"];
+}

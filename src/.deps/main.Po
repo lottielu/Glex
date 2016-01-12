@@ -1076,7 +1076,7 @@ main.o: main.cc /usr/include/stdc-predef.h /usr/include/GL/glew.h \
  /usr/include/glm/gtx/simd_vec4.inl /usr/include/glm/gtx/simd_mat4.hpp \
  /usr/include/glm/detail/intrinsic_matrix.hpp \
  /usr/include/glm/detail/intrinsic_matrix.inl \
- /usr/include/glm/gtx/simd_mat4.inl
+ /usr/include/glm/gtx/simd_mat4.inl Pyramid.h
 
 /usr/include/stdc-predef.h:
 
@@ -3633,3 +3633,5 @@ CubeAsset.h:
 /usr/include/glm/detail/intrinsic_matrix.inl:
 
 /usr/include/glm/gtx/simd_mat4.inl:
+
+Pyramid.h:

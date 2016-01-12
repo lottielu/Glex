@@ -1,0 +1,122 @@
+\hypertarget{main_8cc}{}\section{src/main.cc File Reference}
+\label{main_8cc}\index{src/main.\+cc@{src/main.\+cc}}
+{\ttfamily \#include $<$G\+L/glew.\+h$>$}\\*
+{\ttfamily \#include $<$G\+L/gl.\+h$>$}\\*
+{\ttfamily \#include $<$S\+D\+L2/\+S\+D\+L.\+h$>$}\\*
+{\ttfamily \#include $<$iostream$>$}\\*
+{\ttfamily \#include $<$memory$>$}\\*
+{\ttfamily \#include $<$boost/program\+\_\+options.\+hpp$>$}\\*
+{\ttfamily \#include \char`\"{}common.\+h\char`\"{}}\\*
+{\ttfamily \#include \char`\"{}Game\+World.\+h\char`\"{}}\\*
+Include dependency graph for main.\+cc\+:
+% FIG 0
+\subsection*{Classes}
+\begin{DoxyCompactItemize}
+\item 
+struct \hyperlink{struct_s_d_l_window_deleter}{S\+D\+L\+Window\+Deleter}
+\end{DoxyCompactItemize}
+\subsection*{Macros}
+\begin{DoxyCompactItemize}
+\item 
+\#define \hyperlink{main_8cc_abcde84ea0ef5f934384e4620f092c85a}{G\+L\+E\+W\+\_\+\+S\+T\+A\+T\+I\+C}
+\item 
+\#define \hyperlink{main_8cc_a6ff0ea1b288e03115f981ba31f96fade}{R\+U\+N\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+D\+I\+S\+P\+L\+A\+Y}~0x00;
+\end{DoxyCompactItemize}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+Uint32 \hyperlink{main_8cc_a70eaa727262f633037c3f4b7d3ff24c2}{tick} (Uint32 interval, void $\ast$param)
+\item 
+void \hyperlink{main_8cc_afd34c13fc4f409851ffc0989c13dd287}{Draw} (const std\+::shared\+\_\+ptr$<$ S\+D\+L\+\_\+\+Window $>$ window, const std\+::shared\+\_\+ptr$<$ \hyperlink{class_game_world}{Game\+World} $>$ game\+\_\+world)
+\item 
+std\+::shared\+\_\+ptr$<$ S\+D\+L\+\_\+\+Window $>$ \hyperlink{main_8cc_acab7ade71cf38099442ca5df2495223d}{Init\+World} ()
+\item 
+\hyperlink{common_8h_add86e7c88dd109abea3f708b422f31f0}{Application\+Mode} \hyperlink{main_8cc_aba227fab3b52f0ce7c5b89d75b88dcdc}{Parse\+Options} (int argc, char $\ast$$\ast$argv)
+\item 
+int \hyperlink{main_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{main} (int argc, char $\ast$$\ast$argv)
+\end{DoxyCompactItemize}
+
+
+\subsection{Macro Definition Documentation}
+\hypertarget{main_8cc_abcde84ea0ef5f934384e4620f092c85a}{}\index{main.\+cc@{main.\+cc}!G\+L\+E\+W\+\_\+\+S\+T\+A\+T\+I\+C@{G\+L\+E\+W\+\_\+\+S\+T\+A\+T\+I\+C}}
+\index{G\+L\+E\+W\+\_\+\+S\+T\+A\+T\+I\+C@{G\+L\+E\+W\+\_\+\+S\+T\+A\+T\+I\+C}!main.\+cc@{main.\+cc}}
+\subsubsection[{G\+L\+E\+W\+\_\+\+S\+T\+A\+T\+I\+C}]{\setlength{\rightskip}{0pt plus 5cm}\#define G\+L\+E\+W\+\_\+\+S\+T\+A\+T\+I\+C}\label{main_8cc_abcde84ea0ef5f934384e4620f092c85a}
+
+
+Definition at line 1 of file main.\+cc.
+
+\hypertarget{main_8cc_a6ff0ea1b288e03115f981ba31f96fade}{}\index{main.\+cc@{main.\+cc}!R\+U\+N\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+D\+I\+S\+P\+L\+A\+Y@{R\+U\+N\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+D\+I\+S\+P\+L\+A\+Y}}
+\index{R\+U\+N\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+D\+I\+S\+P\+L\+A\+Y@{R\+U\+N\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+D\+I\+S\+P\+L\+A\+Y}!main.\+cc@{main.\+cc}}
+\subsubsection[{R\+U\+N\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+D\+I\+S\+P\+L\+A\+Y}]{\setlength{\rightskip}{0pt plus 5cm}\#define R\+U\+N\+\_\+\+G\+R\+A\+P\+H\+I\+C\+S\+\_\+\+D\+I\+S\+P\+L\+A\+Y~0x00;}\label{main_8cc_a6ff0ea1b288e03115f981ba31f96fade}
+
+
+Definition at line 10 of file main.\+cc.
+
+
+
+\subsection{Function Documentation}
+\hypertarget{main_8cc_afd34c13fc4f409851ffc0989c13dd287}{}\index{main.\+cc@{main.\+cc}!Draw@{Draw}}
+\index{Draw@{Draw}!main.\+cc@{main.\+cc}}
+\subsubsection[{Draw}]{\setlength{\rightskip}{0pt plus 5cm}void Draw (
+\begin{DoxyParamCaption}
+\item[{const std\+::shared\+\_\+ptr$<$ S\+D\+L\+\_\+\+Window $>$}]{window, }
+\item[{const std\+::shared\+\_\+ptr$<$ {\bf Game\+World} $>$}]{game\+\_\+world}
+\end{DoxyParamCaption}
+)}\label{main_8cc_afd34c13fc4f409851ffc0989c13dd287}
+
+
+Definition at line 37 of file main.\+cc.
+
+\hypertarget{main_8cc_acab7ade71cf38099442ca5df2495223d}{}\index{main.\+cc@{main.\+cc}!Init\+World@{Init\+World}}
+\index{Init\+World@{Init\+World}!main.\+cc@{main.\+cc}}
+\subsubsection[{Init\+World}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<$S\+D\+L\+\_\+\+Window$>$ Init\+World (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{main_8cc_acab7ade71cf38099442ca5df2495223d}
+
+
+Definition at line 47 of file main.\+cc.
+
+\hypertarget{main_8cc_a3c04138a5bfe5d72780bb7e82a18e627}{}\index{main.\+cc@{main.\+cc}!main@{main}}
+\index{main@{main}!main.\+cc@{main.\+cc}}
+\subsubsection[{main}]{\setlength{\rightskip}{0pt plus 5cm}int main (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\label{main_8cc_a3c04138a5bfe5d72780bb7e82a18e627}
+
+
+Definition at line 140 of file main.\+cc.
+
+
+
+Here is the call graph for this function\+:
+% FIG 1
+
+
+\hypertarget{main_8cc_aba227fab3b52f0ce7c5b89d75b88dcdc}{}\index{main.\+cc@{main.\+cc}!Parse\+Options@{Parse\+Options}}
+\index{Parse\+Options@{Parse\+Options}!main.\+cc@{main.\+cc}}
+\subsubsection[{Parse\+Options}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Application\+Mode} Parse\+Options (
+\begin{DoxyParamCaption}
+\item[{int}]{argc, }
+\item[{char $\ast$$\ast$}]{argv}
+\end{DoxyParamCaption}
+)}\label{main_8cc_aba227fab3b52f0ce7c5b89d75b88dcdc}
+
+
+Definition at line 108 of file main.\+cc.
+
+\hypertarget{main_8cc_a70eaa727262f633037c3f4b7d3ff24c2}{}\index{main.\+cc@{main.\+cc}!tick@{tick}}
+\index{tick@{tick}!main.\+cc@{main.\+cc}}
+\subsubsection[{tick}]{\setlength{\rightskip}{0pt plus 5cm}Uint32 tick (
+\begin{DoxyParamCaption}
+\item[{Uint32}]{interval, }
+\item[{void $\ast$}]{param}
+\end{DoxyParamCaption}
+)}\label{main_8cc_a70eaa727262f633037c3f4b7d3ff24c2}
+
+
+Definition at line 21 of file main.\+cc.
+

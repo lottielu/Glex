@@ -1,0 +1,69 @@
+\hypertarget{class_game_world}{}\section{Game\+World Class Reference}
+\label{class_game_world}\index{Game\+World@{Game\+World}}
+
+
+{\ttfamily \#include $<$Game\+World.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_game_world_a17a84e57a80600961088afc753036f89}{Game\+World} (\hyperlink{common_8h_add86e7c88dd109abea3f708b422f31f0}{Application\+Mode})
+\item 
+void \hyperlink{class_game_world_a275418607d8286979b276f165ad5876b}{Draw} ()
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+std\+::shared\+\_\+ptr$<$ \hyperlink{class_game_asset_manager}{Game\+Asset\+Manager} $>$ \hyperlink{class_game_world_aec5c0bca4fb5a41e4aac2dce2871266d}{asset\+\_\+manager}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+\hyperlink{class_game_world}{Game\+World} allows us to separate the management of the game world from the nuts and bolts of game loop initialisation. The \hyperlink{class_game_world}{Game\+World} currently has a very simplified scene graph consisiting of a single \hyperlink{class_game_asset_manager}{Game\+Asset\+Manager}. 
+
+Definition at line 18 of file Game\+World.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_game_world_a17a84e57a80600961088afc753036f89}{}\index{Game\+World@{Game\+World}!Game\+World@{Game\+World}}
+\index{Game\+World@{Game\+World}!Game\+World@{Game\+World}}
+\subsubsection[{Game\+World}]{\setlength{\rightskip}{0pt plus 5cm}Game\+World\+::\+Game\+World (
+\begin{DoxyParamCaption}
+\item[{{\bf Application\+Mode}}]{mode}
+\end{DoxyParamCaption}
+)}\label{class_game_world_a17a84e57a80600961088afc753036f89}
+We thread the Application\+Mode through the \hyperlink{class_game_world}{Game\+World} ss we want to read it in from the user. Threading the state through the various function calls is preferable (in this case) to having some kind of global state. 
+
+Definition at line 3 of file Game\+World.\+cc.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_game_world_a275418607d8286979b276f165ad5876b}{}\index{Game\+World@{Game\+World}!Draw@{Draw}}
+\index{Draw@{Draw}!Game\+World@{Game\+World}}
+\subsubsection[{Draw}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+World\+::\+Draw (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_game_world_a275418607d8286979b276f165ad5876b}
+Calling \hyperlink{class_game_world_a275418607d8286979b276f165ad5876b}{Draw()} will draw the entire world. 
+
+Definition at line 37 of file Game\+World.\+cc.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_game_world_aec5c0bca4fb5a41e4aac2dce2871266d}{}\index{Game\+World@{Game\+World}!asset\+\_\+manager@{asset\+\_\+manager}}
+\index{asset\+\_\+manager@{asset\+\_\+manager}!Game\+World@{Game\+World}}
+\subsubsection[{asset\+\_\+manager}]{\setlength{\rightskip}{0pt plus 5cm}std\+::shared\+\_\+ptr$<${\bf Game\+Asset\+Manager}$>$ Game\+World\+::asset\+\_\+manager\hspace{0.3cm}{\ttfamily [private]}}\label{class_game_world_aec5c0bca4fb5a41e4aac2dce2871266d}
+
+
+Definition at line 32 of file Game\+World.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_game_world_8h}{Game\+World.\+h}\item 
+src/\hyperlink{_game_world_8cc}{Game\+World.\+cc}\end{DoxyCompactItemize}
