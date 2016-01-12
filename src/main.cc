@@ -35,7 +35,7 @@ struct SDLWindowDeleter {
 };
 
 void Draw(const std::shared_ptr<SDL_Window> window, const std::shared_ptr<GameWorld> game_world) {
-  glClearColor(0.0f, 1.0f, 0.0f, 1.0f);
+  glClearColor(1.0f, 1.0f, 1.0f, 1.0f);
   glClear(GL_COLOR_BUFFER_BIT|GL_DEPTH_BUFFER_BIT);
 
   game_world->Draw();
@@ -159,11 +159,13 @@ int main(int argc, char ** argv) {
       break;
     case SDL_USEREVENT:
       Draw(window, game_world);
+      break;
     case SDL_KEYDOWN:
 	switch (event.key.keysym.sym)
 	{
 	case SDLK_w:
 		std::cout<<"w was pressed"<<std::endl;
+
 		break;
 	case SDLK_s:
 		std::cout<<"s was pressed"<<std::endl;
@@ -177,7 +179,6 @@ int main(int argc, char ** argv) {
 	default:
 	break;
 	};
-
       break;
     default:
       break;

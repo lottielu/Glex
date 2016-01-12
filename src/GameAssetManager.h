@@ -26,7 +26,6 @@ class GameAssetManager {
   GameAssetManager(GameAssetManager const&&); // move constructor
   void operator=(GameAssetManager const&); // assignment
   void AddAsset(std::shared_ptr<GameAsset>);
-  void Keyboard();
   void Draw();
 
  private:

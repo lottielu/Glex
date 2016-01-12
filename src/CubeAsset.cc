@@ -1,6 +1,6 @@
 #include "CubeAsset.h"
 
-CubeAsset::CubeAsset()
+CubeAsset::CubeAsset() : model_matrix(glm::mat4(1.0))
 {
   // model coordinates, origin at centre.
   GLfloat vertex_buffer [] {
@@ -45,11 +45,12 @@ CubeAsset::CubeAsset()
 
   // immediately bind the buffer and transfer the data
   glBindBuffer(GL_ARRAY_BUFFER, vertex_buffer_token);
-  glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat) * 24, vertex_buffer, GL_STATIC_DRAW);
+  glBufferData(GL_ARRAY_BUFFER, sizeof(GLfloat) * 72, vertex_buffer, GL_STATIC_DRAW);
 
   glGenBuffers(1, &element_buffer_token);
   glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, element_buffer_token);
   glBufferData(GL_ELEMENT_ARRAY_BUFFER, sizeof(GLuint) * element_buffer_length, element_buffer, GL_STATIC_DRAW);
+  rotateX(45.0f);
 }
 
 CubeAsset::~CubeAsset() {
@@ -75,6 +76,7 @@ void CubeAsset::Draw(GLuint program_token) {
     std::cerr << "Drawing Cube with invalid program" << std::endl;
     return;
   }
+
   GLint validation_ok;
   glValidateProgram(program_token);
   glGetProgramiv(program_token, GL_VALIDATE_STATUS, &validation_ok);
@@ -96,8 +98,14 @@ void CubeAsset::Draw(GLuint program_token) {
   GLuint position_attrib = glGetAttribLocation(program_token, "position");
   checkGLError();
 
+  GLuint model_uniform = glGetUniformLocation(program_token, "model");
+  checkGLError();
+
   glUseProgram(program_token);
   checkGLError();
+
+
+  glUniformMatrix4fv(model_uniform,1,false, glm::value_ptr(model_matrix));
 
   // use the previously transferred buffer as the vertex array.  This way
   // we transfer the buffer once -- at construction -- not on every frame.
@@ -125,4 +133,10 @@ void CubeAsset::Draw(GLuint program_token) {
   checkGLError();
 
   glDisableVertexAttribArray(position_attrib);
+}
+
+void CubeAsset::rotateX(float angle)
+{
+	glm::vec3 unit_x_axis(0.0,1.0,0.0);
+	model_matrix = glm::rotate(this->model_matrix, angle, unit_x_axis);
 }
