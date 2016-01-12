@@ -21,10 +21,12 @@ GameWorld::GameWorld (ApplicationMode mode) {
 		  {
 			  if(coords[x][y][z]==1)
 			  	  {
+				  // draws cube
 				  	  asset_manager->AddAsset(std::make_shared<CubeAsset>(x,y,z));
 			  	  }
 			  if(coords[x][y][z]==2)
 			  {
+				  // draws pyramid
 			  	  asset_manager->AddAsset(std::make_shared<Pyramid>(x,y,z));
 			  }
 		  }
