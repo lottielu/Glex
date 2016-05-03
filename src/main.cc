@@ -143,13 +143,20 @@ int main(int argc, char ** argv) {
   auto mode = ParseOptions(argc, argv);
   auto window = InitWorld();
   auto game_world = std::make_shared<GameWorld>(mode);
+
+  int mouseX;
+  int mouseY;
+  const Uint8 *keyboard_state;
+  Input input_direction = NILL;
+
   if(!window) {
     SDL_Quit();
   }
-
+  Draw(window,game_world);
   // Call the function "tick" every delay milliseconds
   SDL_AddTimer(delay, tick, NULL);
 
+  	  SDL_SetRelativeMouseMode(SDL_TRUE);
   // Add the main event loop
   SDL_Event event;
   while (SDL_WaitEvent(&event)) {
@@ -158,30 +165,40 @@ int main(int argc, char ** argv) {
       SDL_Quit();
       break;
     case SDL_USEREVENT:
-      Draw(window, game_world);
-      break;
-    case SDL_KEYDOWN:
-	switch (event.key.keysym.sym)
-	{
-	case SDLK_w:
-		std::cout<<"w was pressed"<<std::endl;
+    	SDL_GetRelativeMouseState(&mouseX, &mouseY);
 
-		break;
-	case SDLK_s:
-		std::cout<<"s was pressed"<<std::endl;
-		break;
-	case SDLK_a:
-		std::cout<<"a was pressed"<<std::endl;
-		break;
-	case SDLK_d:
-		std::cout<<"d was pressed"<<std::endl;
-		break;
-	default:
-	break;
-	};
-      break;
-    default:
-      break;
+    			keyboard_state = SDL_GetKeyboardState(NULL);
+
+    			if(keyboard_state[SDL_SCANCODE_A])
+    			{
+    			input_direction = LEFT;
+    			}
+    				else if(keyboard_state[SDL_SCANCODE_S])
+    				{
+    				input_direction = DOWN;
+    				}
+    					else if(keyboard_state[SDL_SCANCODE_W])
+    					{
+    					input_direction = UP;
+    					}
+    						else if(keyboard_state[SDL_SCANCODE_D])
+    						{
+    						input_direction = RIGHT;
+    						}
+    							else if(keyboard_state[SDL_SCANCODE_ESCAPE])
+    							{
+    							SDL_Quit();
+    							}
+    								else{
+    								input_direction = NILL;
+    								}
+    									game_world->UpdateCameraPosition(input_direction,mouseX,mouseY);
+    									Draw(window,game_world);
+    									break;
+
+    		default:
+    		break;
     }
+
   }
 }

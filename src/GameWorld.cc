@@ -34,6 +34,12 @@ GameWorld::GameWorld (ApplicationMode mode) {
   }
 }
 
+void GameWorld::UpdateCameraPosition(Input input_direction, int mouseX, int mouseY){
+
+asset_manager->UpdateCameraPosition(input_direction, mouseX, mouseY);
+
+}
+
 void GameWorld::Draw() {
   asset_manager->Draw();
 
