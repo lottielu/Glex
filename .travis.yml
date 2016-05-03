@@ -13,7 +13,7 @@ before_install:
 
 branches:
   only:
-    - master
+    - both
 
 script:
  - autoreconf -i
