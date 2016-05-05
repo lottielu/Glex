@@ -8,13 +8,13 @@ Pyramid::Pyramid(float x, float y, float z) : model_matrix(glm::mat4(1.0))
   GLfloat vertex_buffer [] {
 
 
-		  -0.5 +x, -0.5 +y, -0.5 +z //0
-	    , -0.5 +x, -0.5 +y,  0.5 +z //1
+		  -0.5f +x, -0.5f +y, -0.5f +z //0
+	    , -0.5f +x, -0.5f +y,  0.5f +z //1
 
-	    ,  0.5 +x, -0.5 +y,  0.5 +z //2
-	    ,  0.5 +x, -0.5 +y, -0.5 +z //3
+	    ,  0.5f +x, -0.5f +y,  0.5f +z //2
+	    ,  0.5f +x, -0.5f +y, -0.5f +z //3
 
-		,  0.0 +x,  0.5 +y,  0.0 +z //4
+		,  0.0f +x,  0.5f +y,  0.0f +z //4
   };
 
   GLfloat vertex_buffer_length = sizeof(vertex_buffer);
