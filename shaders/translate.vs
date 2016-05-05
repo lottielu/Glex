@@ -51,5 +51,5 @@ void main() {
 			*viewMatrix
 			*translateMatrix
 			*vec4(position, 1.0);
-			
+			frag_color = colour;
 }
