@@ -20,6 +20,7 @@ class CubeAsset : public GameAsset {
   GLuint element_buffer_length;
   GLuint vertex_buffer_token, element_buffer_token;
   glm::mat4 model_matrix;
+  glm::mat4 ani;
   GLuint colour_buffer_length;
   GLuint colour_buffer_token;
 };
