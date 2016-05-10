@@ -10,12 +10,24 @@
 namespace std {
 
 BoundingBox::BoundingBox() {
-	// TODO Auto-generated constructor stub
+
+	glm::vec3 x_y_z_pos,
+								glm::vec3 translate,
+	                            glm::vec3 animate,
+	                            glm::vec3 rotate,
+	                            glm::vec3 scale)
+	{
+		Box::translate(glm::vec3 translate){
+
+		}
+
+		Box::scale(glm::vec3 scale){
+		}
+
+		Boxx::pos(glm::vec3 x_y_z_pos){
+
+		}
+
+
 
 }
-
-BoundingBox::~BoundingBox() {
-	// TODO Auto-generated destructor stub
-}
-
-} /* namespace std */

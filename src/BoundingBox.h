@@ -1,21 +1,26 @@
-/*
- * BoundingBox.h
- *
- *  Created on: 10 May 2016
- *      Author: cf324
- */
+ #ifndef BoundingBox_H
+#define BoundingBox_H
 
-#ifndef SRC_BOUNDINGBOX_H_
-#define SRC_BOUNDINGBOX_H_
 
-namespace std {
+class BoundingBox
+{
 
-class BoundingBox {
+private:
+std::shared_ptr<glm::
+
 public:
-	BoundingBox();
-	virtual ~BoundingBox();
+
+BoundingBox(			glm::vec3 x_y_z_pos,
+		glm::vec3 translate,
+        glm::vec3 animate,
+        glm::vec3 rotate,
+        glm::vec3 scale););
+virtual ~ BoundingBox();
+
+void translate(glm::vec3);
+
+
 };
 
-} /* namespace std */
 
-#endif /* SRC_BOUNDINGBOX_H_ */
+#endif
