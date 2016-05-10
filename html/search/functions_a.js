@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['_7ecubeasset',['~CubeAsset',['../class_cube_asset.html#ab3ab9a5da82cbf8537a28652410093b1',1,'CubeAsset']]],
-  ['_7egameassetmanager',['~GameAssetManager',['../class_game_asset_manager.html#a1270bd61ecbcca563f079803e40c9b77',1,'GameAssetManager']]],
-  ['_7epyramid',['~Pyramid',['../class_pyramid.html#a815ce650e2be7f04a44a0424af0e208a',1,'Pyramid']]]
+  ['readshader',['ReadShader',['../class_game_asset_manager.html#a23b124a213308a68a882727127601c97',1,'GameAssetManager']]],
+  ['rotatex',['rotateX',['../class_cube_asset.html#ad3bd98dd1b0a34b3dc4234913e41c3e5',1,'CubeAsset::rotateX()'],['../class_pyramid.html#aa1422dc7a204d2cf3ac9e28dae2d00cf',1,'Pyramid::rotateX()']]]
 ];

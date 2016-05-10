@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['main',['main',['../main_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main.cc']]]
+  ['initworld',['InitWorld',['../main_8cc.html#acab7ade71cf38099442ca5df2495223d',1,'main.cc']]]
 ];

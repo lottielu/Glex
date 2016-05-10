@@ -1,5 +1,4 @@
 var searchData=
 [
-  ['operator_28_29',['operator()',['../struct_s_d_l_window_deleter.html#a2aedcc99c3756ae090c38badabeb10b1',1,'SDLWindowDeleter']]],
-  ['operator_3d',['operator=',['../class_game_asset_manager.html#ac72678a4ad5378c685aa6bae84a4e712',1,'GameAssetManager']]]
+  ['libbindtest',['LibBindTest',['../class_game_world.html#a0a602674c208799fdb4068f1ba8dad03',1,'GameWorld']]]
 ];

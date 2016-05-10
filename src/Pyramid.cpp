@@ -1,18 +1,23 @@
 #include "Pyramid.h"
-
+#include "Camera.h"
+#include <glm/ext.hpp>
+/**
+ * Pyramid asset class
+ * Controls all aspect of each pyramid added
+ */
 Pyramid::Pyramid(float x, float y, float z) : model_matrix(glm::mat4(1.0))
 {
   // model coordinates, origin at centre.
   GLfloat vertex_buffer [] {
 
 
-		  -0.5 +x, -0.5 +y, -0.5 +z //0
-	    , -0.5 +x, -0.5 +y,  0.5 +z //1
+		  -0.5f +x, -0.5f +y, -0.5f +z //0
+	    , -0.5f +x, -0.5f +y,  0.5f +z //1
 
-	    ,  0.5 +x, -0.5 +y,  0.5 +z //2
-	    ,  0.5 +x, -0.5 +y, -0.5 +z //3
+	    ,  0.5f +x, -0.5f +y,  0.5f +z //2
+	    ,  0.5f +x, -0.5f +y, -0.5f +z //3
 
-		,  0.0 +x,  0.5 +y,  0.0 +z //4
+		,  0.0f +x,  0.5f +y,  0.0f +z //4
   };
 
   GLfloat vertex_buffer_length = sizeof(vertex_buffer);
@@ -67,7 +72,7 @@ Pyramid::Pyramid(float x, float y, float z) : model_matrix(glm::mat4(1.0))
   glGenBuffers(1, &element_buffer_token);
   glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, element_buffer_token);
   glBufferData(GL_ELEMENT_ARRAY_BUFFER, element_buffer_length, element_buffer, GL_STATIC_DRAW);
-  //rotateX(90.0f);
+
 }
 
 Pyramid::~Pyramid() {
@@ -115,16 +120,18 @@ void Pyramid::Draw(GLuint program_token) {
   GLuint position_attrib = glGetAttribLocation(program_token, "position");
   checkGLError();
 
-  GLuint model_uniform = glGetUniformLocation(program_token, "model");
-  checkGLError();
-
   glUseProgram(program_token);
   checkGLError();
 
+  /**
+   * animation matrix to control the rotation of pyramids
+   */
+  GLuint animationMatrix = glGetUniformLocation(program_token, "animationMatrix");
+  angle += 0.002f;
+  animate = glm::rotate(glm::mat4(1.0f),angle,glm::vec3(0,0.5,0));
+  glUniformMatrix4fv(animationMatrix,1,GL_FALSE,&animate[0][0]);
 
-  glUniformMatrix4fv(model_uniform,1,false, glm::value_ptr(model_matrix));
-
-  // use the previously transferred buffer as the vertex array.  This way
+   // use the previously transferred buffer as the vertex array.  This way
   // we transfer the buffer once -- at construction -- not on every frame.
   glEnableVertexAttribArray(0);
   glBindBuffer(GL_ARRAY_BUFFER, vertex_buffer_token);
@@ -142,7 +149,7 @@ void Pyramid::Draw(GLuint program_token) {
 
   glBindBuffer(GL_ARRAY_BUFFER, colour_buffer_token);
   glVertexAttribPointer(1,3,GL_FLOAT,GL_FALSE,0,(void*)0);
-
+  checkGLError();
   glBindBuffer(GL_ELEMENT_ARRAY_BUFFER, element_buffer_token);
   glDrawElements(
                  GL_TRIANGLES,
@@ -154,10 +161,4 @@ void Pyramid::Draw(GLuint program_token) {
   checkGLError();
 
   glDisableVertexAttribArray(position_attrib);
-}
-
-void Pyramid::rotateX(float angle)
-{
-	glm::vec3 unit_x_axis(0.0,1.0,0.0);
-	model_matrix = glm::rotate(this->model_matrix, angle, unit_x_axis);
 }

@@ -1,0 +1,9 @@
+digraph "GameAssetManager::UpdateCameraPosition"
+{
+  edge [fontname="Helvetica",fontsize="10",labelfontname="Helvetica",labelfontsize="10"];
+  node [fontname="Helvetica",fontsize="10",shape=record];
+  rankdir="LR";
+  Node1 [label="GameAssetManager::Update\lCameraPosition",height=0.2,width=0.4,color="black", fillcolor="grey75", style="filled", fontcolor="black"];
+  Node1 -> Node2 [color="midnightblue",fontsize="10",style="solid"];
+  Node2 [label="Camera::UpdateCameraPosition",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$class_camera.html#ac0f7e4d6a41e3b425eed9cfa392a9508"];
+}

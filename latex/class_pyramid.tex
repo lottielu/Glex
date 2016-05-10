@@ -23,6 +23,13 @@ virtual void \hyperlink{class_pyramid_a4205e8fa45cc315d4687cf6c06182082}{Draw} (
 \item 
 void \hyperlink{class_pyramid_aa1422dc7a204d2cf3ac9e28dae2d00cf}{rotate\+X} (float)
 \end{DoxyCompactItemize}
+\subsection*{Public Attributes}
+\begin{DoxyCompactItemize}
+\item 
+glm\+::mat4 \hyperlink{class_pyramid_a8d8eb524eef28523e7203925a3aead87}{animate}
+\item 
+G\+Lfloat \hyperlink{class_pyramid_a719d723fa89279bae99e7c38603e91c2}{angle}
+\end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -55,34 +62,34 @@ Definition at line 12 of file Pyramid.\+h.
 \subsection{Constructor \& Destructor Documentation}
 \hypertarget{class_pyramid_ac2fb5fcb7eeae3b952e3c097c7c9647b}{}\index{Pyramid@{Pyramid}!Pyramid@{Pyramid}}
 \index{Pyramid@{Pyramid}!Pyramid@{Pyramid}}
-\subsubsection[{Pyramid}]{\setlength{\rightskip}{0pt plus 5cm}Pyramid\+::\+Pyramid (
+\subsubsection[{Pyramid(float x, float y, float z)}]{\setlength{\rightskip}{0pt plus 5cm}Pyramid\+::\+Pyramid (
 \begin{DoxyParamCaption}
 \item[{float}]{x, }
 \item[{float}]{y, }
 \item[{float}]{z}
 \end{DoxyParamCaption}
 )}\label{class_pyramid_ac2fb5fcb7eeae3b952e3c097c7c9647b}
+\hyperlink{class_pyramid}{Pyramid} asset class Controls all aspect of each pyramid added 
 
-
-Definition at line 3 of file Pyramid.\+cpp.
+Definition at line 8 of file Pyramid.\+cpp.
 
 \hypertarget{class_pyramid_a815ce650e2be7f04a44a0424af0e208a}{}\index{Pyramid@{Pyramid}!````~Pyramid@{$\sim$\+Pyramid}}
 \index{````~Pyramid@{$\sim$\+Pyramid}!Pyramid@{Pyramid}}
-\subsubsection[{$\sim$\+Pyramid}]{\setlength{\rightskip}{0pt plus 5cm}Pyramid\+::$\sim$\+Pyramid (
+\subsubsection[{$\sim$\+Pyramid()}]{\setlength{\rightskip}{0pt plus 5cm}Pyramid\+::$\sim$\+Pyramid (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )}\label{class_pyramid_a815ce650e2be7f04a44a0424af0e208a}
 
 
-Definition at line 73 of file Pyramid.\+cpp.
+Definition at line 78 of file Pyramid.\+cpp.
 
 
 
 \subsection{Member Function Documentation}
 \hypertarget{class_pyramid_abedc6115d45aa811ebe6b6d93fa87958}{}\index{Pyramid@{Pyramid}!check\+Error@{check\+Error}}
 \index{check\+Error@{check\+Error}!Pyramid@{Pyramid}}
-\subsubsection[{check\+Error}]{\setlength{\rightskip}{0pt plus 5cm}void Pyramid\+::check\+Error (
+\subsubsection[{check\+Error(std\+::string file, int line)}]{\setlength{\rightskip}{0pt plus 5cm}void Pyramid\+::check\+Error (
 \begin{DoxyParamCaption}
 \item[{std\+::string}]{file, }
 \item[{int}]{line}
@@ -90,78 +97,88 @@ Definition at line 73 of file Pyramid.\+cpp.
 )\hspace{0.3cm}{\ttfamily [private]}}\label{class_pyramid_abedc6115d45aa811ebe6b6d93fa87958}
 
 
-Definition at line 83 of file Pyramid.\+cpp.
+Definition at line 88 of file Pyramid.\+cpp.
 
 \hypertarget{class_pyramid_a4205e8fa45cc315d4687cf6c06182082}{}\index{Pyramid@{Pyramid}!Draw@{Draw}}
 \index{Draw@{Draw}!Pyramid@{Pyramid}}
-\subsubsection[{Draw}]{\setlength{\rightskip}{0pt plus 5cm}void Pyramid\+::\+Draw (
+\subsubsection[{Draw(\+G\+Luint)}]{\setlength{\rightskip}{0pt plus 5cm}void Pyramid\+::\+Draw (
 \begin{DoxyParamCaption}
 \item[{G\+Luint}]{program\+\_\+token}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_pyramid_a4205e8fa45cc315d4687cf6c06182082}
-
+animation matrix to control the rotation of pyramids
 
 Implements \hyperlink{class_game_asset_a961aa51ca0a9961fc584c0b5d5431300}{Game\+Asset}.
 
 
 
-Definition at line 91 of file Pyramid.\+cpp.
+Definition at line 96 of file Pyramid.\+cpp.
 
 \hypertarget{class_pyramid_aa1422dc7a204d2cf3ac9e28dae2d00cf}{}\index{Pyramid@{Pyramid}!rotate\+X@{rotate\+X}}
 \index{rotate\+X@{rotate\+X}!Pyramid@{Pyramid}}
-\subsubsection[{rotate\+X}]{\setlength{\rightskip}{0pt plus 5cm}void Pyramid\+::rotate\+X (
+\subsubsection[{rotate\+X(float)}]{\setlength{\rightskip}{0pt plus 5cm}void Pyramid\+::rotate\+X (
 \begin{DoxyParamCaption}
-\item[{float}]{angle}
+\item[{float}]{}
 \end{DoxyParamCaption}
 )}\label{class_pyramid_aa1422dc7a204d2cf3ac9e28dae2d00cf}
 
 
-Definition at line 159 of file Pyramid.\+cpp.
-
-
-
 \subsection{Member Data Documentation}
+\hypertarget{class_pyramid_a719d723fa89279bae99e7c38603e91c2}{}\index{Pyramid@{Pyramid}!angle@{angle}}
+\index{angle@{angle}!Pyramid@{Pyramid}}
+\subsubsection[{angle}]{\setlength{\rightskip}{0pt plus 5cm}G\+Lfloat Pyramid\+::angle}\label{class_pyramid_a719d723fa89279bae99e7c38603e91c2}
+
+
+Definition at line 19 of file Pyramid.\+h.
+
+\hypertarget{class_pyramid_a8d8eb524eef28523e7203925a3aead87}{}\index{Pyramid@{Pyramid}!animate@{animate}}
+\index{animate@{animate}!Pyramid@{Pyramid}}
+\subsubsection[{animate}]{\setlength{\rightskip}{0pt plus 5cm}glm\+::mat4 Pyramid\+::animate}\label{class_pyramid_a8d8eb524eef28523e7203925a3aead87}
+
+
+Definition at line 18 of file Pyramid.\+h.
+
 \hypertarget{class_pyramid_add41d4b357644ea0dd2cbf5ad7ebf59b}{}\index{Pyramid@{Pyramid}!colour\+\_\+buffer\+\_\+length@{colour\+\_\+buffer\+\_\+length}}
 \index{colour\+\_\+buffer\+\_\+length@{colour\+\_\+buffer\+\_\+length}!Pyramid@{Pyramid}}
 \subsubsection[{colour\+\_\+buffer\+\_\+length}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Pyramid\+::colour\+\_\+buffer\+\_\+length\hspace{0.3cm}{\ttfamily [private]}}\label{class_pyramid_add41d4b357644ea0dd2cbf5ad7ebf59b}
 
 
-Definition at line 23 of file Pyramid.\+h.
+Definition at line 26 of file Pyramid.\+h.
 
 \hypertarget{class_pyramid_a20c19661fc7ece0b2122af63501a3f0c}{}\index{Pyramid@{Pyramid}!colour\+\_\+buffer\+\_\+token@{colour\+\_\+buffer\+\_\+token}}
 \index{colour\+\_\+buffer\+\_\+token@{colour\+\_\+buffer\+\_\+token}!Pyramid@{Pyramid}}
 \subsubsection[{colour\+\_\+buffer\+\_\+token}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Pyramid\+::colour\+\_\+buffer\+\_\+token\hspace{0.3cm}{\ttfamily [private]}}\label{class_pyramid_a20c19661fc7ece0b2122af63501a3f0c}
 
 
-Definition at line 24 of file Pyramid.\+h.
+Definition at line 27 of file Pyramid.\+h.
 
 \hypertarget{class_pyramid_a9692c05fe1796a90a4bf995bea95f7f2}{}\index{Pyramid@{Pyramid}!element\+\_\+buffer\+\_\+length@{element\+\_\+buffer\+\_\+length}}
 \index{element\+\_\+buffer\+\_\+length@{element\+\_\+buffer\+\_\+length}!Pyramid@{Pyramid}}
 \subsubsection[{element\+\_\+buffer\+\_\+length}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Pyramid\+::element\+\_\+buffer\+\_\+length\hspace{0.3cm}{\ttfamily [private]}}\label{class_pyramid_a9692c05fe1796a90a4bf995bea95f7f2}
 
 
-Definition at line 20 of file Pyramid.\+h.
+Definition at line 22 of file Pyramid.\+h.
 
 \hypertarget{class_pyramid_a760ec3c4f40ea025e57f0f95d118a921}{}\index{Pyramid@{Pyramid}!element\+\_\+buffer\+\_\+token@{element\+\_\+buffer\+\_\+token}}
 \index{element\+\_\+buffer\+\_\+token@{element\+\_\+buffer\+\_\+token}!Pyramid@{Pyramid}}
 \subsubsection[{element\+\_\+buffer\+\_\+token}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Pyramid\+::element\+\_\+buffer\+\_\+token\hspace{0.3cm}{\ttfamily [private]}}\label{class_pyramid_a760ec3c4f40ea025e57f0f95d118a921}
 
 
-Definition at line 21 of file Pyramid.\+h.
+Definition at line 23 of file Pyramid.\+h.
 
 \hypertarget{class_pyramid_a6c97c4bb0dd7e4f12e50edd8dcc1cce9}{}\index{Pyramid@{Pyramid}!model\+\_\+matrix@{model\+\_\+matrix}}
 \index{model\+\_\+matrix@{model\+\_\+matrix}!Pyramid@{Pyramid}}
 \subsubsection[{model\+\_\+matrix}]{\setlength{\rightskip}{0pt plus 5cm}glm\+::mat4 Pyramid\+::model\+\_\+matrix\hspace{0.3cm}{\ttfamily [private]}}\label{class_pyramid_a6c97c4bb0dd7e4f12e50edd8dcc1cce9}
 
 
-Definition at line 22 of file Pyramid.\+h.
+Definition at line 24 of file Pyramid.\+h.
 
 \hypertarget{class_pyramid_a8e1f08dc7c85cabe71117b1c9b8ea987}{}\index{Pyramid@{Pyramid}!vertex\+\_\+buffer\+\_\+token@{vertex\+\_\+buffer\+\_\+token}}
 \index{vertex\+\_\+buffer\+\_\+token@{vertex\+\_\+buffer\+\_\+token}!Pyramid@{Pyramid}}
 \subsubsection[{vertex\+\_\+buffer\+\_\+token}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Pyramid\+::vertex\+\_\+buffer\+\_\+token\hspace{0.3cm}{\ttfamily [private]}}\label{class_pyramid_a8e1f08dc7c85cabe71117b1c9b8ea987}
 
 
-Definition at line 21 of file Pyramid.\+h.
+Definition at line 23 of file Pyramid.\+h.
 
 
 

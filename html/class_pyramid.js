@@ -5,6 +5,8 @@ var class_pyramid =
     [ "checkError", "class_pyramid.html#abedc6115d45aa811ebe6b6d93fa87958", null ],
     [ "Draw", "class_pyramid.html#a4205e8fa45cc315d4687cf6c06182082", null ],
     [ "rotateX", "class_pyramid.html#aa1422dc7a204d2cf3ac9e28dae2d00cf", null ],
+    [ "angle", "class_pyramid.html#a719d723fa89279bae99e7c38603e91c2", null ],
+    [ "animate", "class_pyramid.html#a8d8eb524eef28523e7203925a3aead87", null ],
     [ "colour_buffer_length", "class_pyramid.html#add41d4b357644ea0dd2cbf5ad7ebf59b", null ],
     [ "colour_buffer_token", "class_pyramid.html#a20c19661fc7ece0b2122af63501a3f0c", null ],
     [ "element_buffer_length", "class_pyramid.html#a9692c05fe1796a90a4bf995bea95f7f2", null ],

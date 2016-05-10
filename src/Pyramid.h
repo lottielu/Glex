@@ -15,11 +15,14 @@ class Pyramid : public GameAsset {
   ~Pyramid();
   virtual void Draw(GLuint);
   void rotateX(float);
+  glm::mat4 animate;
+  GLfloat angle;
 
  private:
   GLuint element_buffer_length;
   GLuint vertex_buffer_token, element_buffer_token;
   glm::mat4 model_matrix;
+
   GLuint colour_buffer_length;
   GLuint colour_buffer_token;
 

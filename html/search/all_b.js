@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['tick',['tick',['../main_8cc.html#a70eaa727262f633037c3f4b7d3ff24c2',1,'main.cc']]],
-  ['transform',['TRANSFORM',['../common_8h.html#add86e7c88dd109abea3f708b422f31f0a25f73324dc93d9024c0c75b4e6815335',1,'common.h']]]
+  ['operator_28_29',['operator()',['../struct_s_d_l_window_deleter.html#a2aedcc99c3756ae090c38badabeb10b1',1,'SDLWindowDeleter']]],
+  ['operator_3d',['operator=',['../class_game_asset_manager.html#ac72678a4ad5378c685aa6bae84a4e712',1,'GameAssetManager']]]
 ];
