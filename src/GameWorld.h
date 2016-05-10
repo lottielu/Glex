@@ -25,13 +25,16 @@ class GameWorld {
    */
   GameWorld(ApplicationMode);
 
+
   /**
    * Calling Draw() will draw the entire world.
    */
   void Draw();
+  void LibBindTest();
 
   void UpdateCameraPosition(Input, int mouseX, int mouseY);
  private:
   std::shared_ptr<GameAssetManager> asset_manager;
+
 };
 #endif // GAMEWORLD_H

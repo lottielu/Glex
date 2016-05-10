@@ -133,9 +133,9 @@ void CubeAsset::Draw(GLuint program_token) {
   glUseProgram(program_token);
   checkGLError();
 
-  GLuint animation = glGetUniformLocation(program_token, "animation");
+  GLuint animationMatrix = glGetUniformLocation(program_token, "animationMatrix");
 
-  glUniformMatrix4fv(animation,1,GL_FALSE,&ani[0][0]);
+  glUniformMatrix4fv(animationMatrix,1,GL_FALSE,&animate[0][0]);
 
   // use the previously transferred buffer as the vertex array.  This way
   // we transfer the buffer once -- at construction -- not on every frame.

@@ -40,6 +40,11 @@ asset_manager->UpdateCameraPosition(input_direction, mouseX, mouseY);
 
 }
 
+void GameWorld::LibBindTest()
+{
+	std::cout<<"Lib Test"<<std::endl;
+}
+
 void GameWorld::Draw() {
   asset_manager->Draw();
 

@@ -15,7 +15,7 @@ class Pyramid : public GameAsset {
   ~Pyramid();
   virtual void Draw(GLuint);
   void rotateX(float);
-  glm::mat4 ani;
+  glm::mat4 animate;
   GLfloat angle;
 
  private:

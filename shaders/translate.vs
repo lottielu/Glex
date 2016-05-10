@@ -9,7 +9,7 @@ in vec3 colour;
 uniform mat4 translateMatrix;
 uniform mat4 viewMatrix;
 uniform mat4 projectionMatrix;
-uniform mat4 animation;
+uniform mat4 animationMatrix;
 
 
 
@@ -51,7 +51,7 @@ void main() {
       gl_Position = (projectionMatrix
 			*viewMatrix
 			*translateMatrix
-		    *animation)
+		    *animationMatrix)
 			*vec4(position, 1.0);
 			frag_color = colour;
 }

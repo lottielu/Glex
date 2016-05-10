@@ -120,10 +120,10 @@ void Pyramid::Draw(GLuint program_token) {
   glUseProgram(program_token);
   checkGLError();
 
-  GLuint animation = glGetUniformLocation(program_token, "animation");
-  angle += 0.001f;
-  ani = glm::rotate(glm::mat4(1.0f),angle,glm::vec3(0,0.5,0));
-  glUniformMatrix4fv(animation,1,GL_FALSE,&ani[0][0]);
+  GLuint animationMatrix = glGetUniformLocation(program_token, "animationMatrix");
+  angle += 0.002f;
+  animate = glm::rotate(glm::mat4(1.0f),angle,glm::vec3(0,0.5,0));
+  glUniformMatrix4fv(animationMatrix,1,GL_FALSE,&animate[0][0]);
 
    // use the previously transferred buffer as the vertex array.  This way
   // we transfer the buffer once -- at construction -- not on every frame.
