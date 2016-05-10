@@ -1,7 +1,8 @@
 var searchData=
 [
-  ['readshader',['ReadShader',['../class_game_asset_manager.html#a23b124a213308a68a882727127601c97',1,'GameAssetManager']]],
-  ['rotate',['ROTATE',['../common_8h.html#add86e7c88dd109abea3f708b422f31f0a3dcfe0046eb5876e287dbf0914819b16',1,'common.h']]],
-  ['rotatex',['rotateX',['../class_cube_asset.html#ad3bd98dd1b0a34b3dc4234913e41c3e5',1,'CubeAsset::rotateX()'],['../class_pyramid.html#aa1422dc7a204d2cf3ac9e28dae2d00cf',1,'Pyramid::rotateX()']]],
-  ['run_5fgraphics_5fdisplay',['RUN_GRAPHICS_DISPLAY',['../main_8cc.html#a6ff0ea1b288e03115f981ba31f96fade',1,'main.cc']]]
+  ['main',['main',['../main_8cc.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main.cc']]],
+  ['main_2ecc',['main.cc',['../main_8cc.html',1,'']]],
+  ['model_5fmatrix',['model_matrix',['../class_cube_asset.html#a49b69783f209cc8268a8be7d46c803d6',1,'CubeAsset::model_matrix()'],['../class_pyramid.html#a6c97c4bb0dd7e4f12e50edd8dcc1cce9',1,'Pyramid::model_matrix()']]],
+  ['mousedeltax',['mouseDeltaX',['../class_camera.html#a38f42e9b04d2180f267af1bdd5b87216',1,'Camera']]],
+  ['mousedeltay',['mouseDeltaY',['../class_camera.html#a65944911597dcfb60e21300ed8c62305',1,'Camera']]]
 ];

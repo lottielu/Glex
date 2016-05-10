@@ -4,6 +4,10 @@
 
 {\ttfamily \#include $<$Game\+Asset\+Manager.\+h$>$}
 
+
+
+Collaboration diagram for Game\+Asset\+Manager\+:
+% FIG 0
 \subsection*{Public Member Functions}
 \begin{DoxyCompactItemize}
 \item 
@@ -20,6 +24,8 @@ void \hyperlink{class_game_asset_manager_ac72678a4ad5378c685aa6bae84a4e712}{oper
 void \hyperlink{class_game_asset_manager_ad3de8ff00d55ba04728b1de8213b2349}{Add\+Asset} (std\+::shared\+\_\+ptr$<$ \hyperlink{class_game_asset}{Game\+Asset} $>$)
 \item 
 void \hyperlink{class_game_asset_manager_a32837132bd70a9a9ed537323c2d3d886}{Draw} ()
+\item 
+void \hyperlink{class_game_asset_manager_a2a2eeb7778b2955694cf2dd68f9daefb}{Update\+Camera\+Position} (\hyperlink{common_8h_a080a822f0093973313bd644e517a5090}{Input}, int mouse\+X, int mouse\+Y)
 \end{DoxyCompactItemize}
 \subsection*{Private Member Functions}
 \begin{DoxyCompactItemize}
@@ -36,84 +42,102 @@ std\+::pair$<$ G\+Lchar $\ast$, G\+Lint $>$ \hyperlink{class_game_asset_manager_
 std\+::vector$<$ std\+::shared\+\_\+ptr$<$ \hyperlink{class_game_asset}{Game\+Asset} $>$ $>$ \hyperlink{class_game_asset_manager_a671cddd92f1de4186c582fe0c4297b7d}{draw\+\_\+list}
 \item 
 G\+Luint \hyperlink{class_game_asset_manager_ad7bab17862e06ca692289f934b40548b}{program\+\_\+token}
+\item 
+\hyperlink{class_camera}{Camera} \hyperlink{class_game_asset_manager_af408912d75b4d97d29babc8850ecb8ae}{camera}
+\item 
+G\+Luint \hyperlink{class_game_asset_manager_a5e737710573e276ca53c683bc6731a51}{translate\+Matrix\+\_\+link}
+\item 
+G\+Luint \hyperlink{class_game_asset_manager_a71322a65c085d1d296e87aaddc4aea15}{view\+Matrix\+\_\+link}
+\item 
+G\+Luint \hyperlink{class_game_asset_manager_aa98eb0fb89a0a39e29be33294b322855}{projection\+Matrix\+\_\+link}
+\item 
+glm\+::mat4 \hyperlink{class_game_asset_manager_a1f0530749ec3ca5ee7925b2b70e8a8c2}{translate\+Matrix}
+\item 
+glm\+::mat4 \hyperlink{class_game_asset_manager_a4e702908c5d7d66e40c676d2c4f7930c}{view\+Matrix}
+\item 
+glm\+::mat4 \hyperlink{class_game_asset_manager_a2bc76e9ac72dcf9490436a59dc3bc752}{projection\+Matrix}
+\item 
+G\+Luint \hyperlink{class_game_asset_manager_a011295db68f0413a94700c5aa2778c45}{camera\+Position\+X}
+\item 
+G\+Luint \hyperlink{class_game_asset_manager_a076d00cef5f59a5038e168a0cc80420d}{camera\+Position\+Z}
 \end{DoxyCompactItemize}
 
 
 \subsection{Detailed Description}
 \hyperlink{class_game_asset_manager}{Game\+Asset\+Manager} is a container for Game\+Assets. It also provides utility functions to to create a simple Open\+G\+L program that can be used to draw a simple \hyperlink{class_game_asset}{Game\+Asset}. 
 
-Definition at line 21 of file Game\+Asset\+Manager.\+h.
+Definition at line 24 of file Game\+Asset\+Manager.\+h.
 
 
 
 \subsection{Constructor \& Destructor Documentation}
 \hypertarget{class_game_asset_manager_aaa0d58e276cc10ad91a7457085598a71}{}\index{Game\+Asset\+Manager@{Game\+Asset\+Manager}!Game\+Asset\+Manager@{Game\+Asset\+Manager}}
 \index{Game\+Asset\+Manager@{Game\+Asset\+Manager}!Game\+Asset\+Manager@{Game\+Asset\+Manager}}
-\subsubsection[{Game\+Asset\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}Game\+Asset\+Manager\+::\+Game\+Asset\+Manager (
+\subsubsection[{Game\+Asset\+Manager(\+Application\+Mode)}]{\setlength{\rightskip}{0pt plus 5cm}Game\+Asset\+Manager\+::\+Game\+Asset\+Manager (
 \begin{DoxyParamCaption}
 \item[{{\bf Application\+Mode}}]{mode}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [explicit]}}\label{class_game_asset_manager_aaa0d58e276cc10ad91a7457085598a71}
 Creates a \hyperlink{class_game_asset_manager}{Game\+Asset\+Manager} to load the correct shaders based on the Application\+Mode. 
 
-Definition at line 7 of file Game\+Asset\+Manager.\+cc.
+Definition at line 9 of file Game\+Asset\+Manager.\+cc.
 
 
 
 Here is the call graph for this function\+:
-% FIG 0
+% FIG 1
 
 
 \hypertarget{class_game_asset_manager_a1270bd61ecbcca563f079803e40c9b77}{}\index{Game\+Asset\+Manager@{Game\+Asset\+Manager}!````~Game\+Asset\+Manager@{$\sim$\+Game\+Asset\+Manager}}
 \index{````~Game\+Asset\+Manager@{$\sim$\+Game\+Asset\+Manager}!Game\+Asset\+Manager@{Game\+Asset\+Manager}}
-\subsubsection[{$\sim$\+Game\+Asset\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}Game\+Asset\+Manager\+::$\sim$\+Game\+Asset\+Manager (
+\subsubsection[{$\sim$\+Game\+Asset\+Manager()}]{\setlength{\rightskip}{0pt plus 5cm}Game\+Asset\+Manager\+::$\sim$\+Game\+Asset\+Manager (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )\hspace{0.3cm}{\ttfamily [virtual]}}\label{class_game_asset_manager_a1270bd61ecbcca563f079803e40c9b77}
 Deletes a \hyperlink{class_game_asset_manager}{Game\+Asset\+Manager}, in particular it will clean up any modifications to the Open\+G\+L state. 
 
-Definition at line 30 of file Game\+Asset\+Manager.\+cc.
+Definition at line 45 of file Game\+Asset\+Manager.\+cc.
 
 \hypertarget{class_game_asset_manager_a2c9adcb72faa154c87eadc9bafe5269d}{}\index{Game\+Asset\+Manager@{Game\+Asset\+Manager}!Game\+Asset\+Manager@{Game\+Asset\+Manager}}
 \index{Game\+Asset\+Manager@{Game\+Asset\+Manager}!Game\+Asset\+Manager@{Game\+Asset\+Manager}}
-\subsubsection[{Game\+Asset\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}Game\+Asset\+Manager\+::\+Game\+Asset\+Manager (
+\subsubsection[{Game\+Asset\+Manager(\+Game\+Asset\+Manager const \&)}]{\setlength{\rightskip}{0pt plus 5cm}Game\+Asset\+Manager\+::\+Game\+Asset\+Manager (
 \begin{DoxyParamCaption}
 \item[{{\bf Game\+Asset\+Manager} const \&}]{the\+\_\+manager}
 \end{DoxyParamCaption}
 )}\label{class_game_asset_manager_a2c9adcb72faa154c87eadc9bafe5269d}
 Unimplemented copy constructor -- this means that the \hyperlink{class_game_asset_manager}{Game\+Asset\+Manager} may not work as you\textquotesingle{}d expect when being copied. 
 
-Definition at line 38 of file Game\+Asset\+Manager.\+cc.
+Definition at line 53 of file Game\+Asset\+Manager.\+cc.
 
 \hypertarget{class_game_asset_manager_a44f6e2fd6b8ff1dd64e5697f1be7386d}{}\index{Game\+Asset\+Manager@{Game\+Asset\+Manager}!Game\+Asset\+Manager@{Game\+Asset\+Manager}}
 \index{Game\+Asset\+Manager@{Game\+Asset\+Manager}!Game\+Asset\+Manager@{Game\+Asset\+Manager}}
-\subsubsection[{Game\+Asset\+Manager}]{\setlength{\rightskip}{0pt plus 5cm}Game\+Asset\+Manager\+::\+Game\+Asset\+Manager (
+\subsubsection[{Game\+Asset\+Manager(\+Game\+Asset\+Manager const \&\&)}]{\setlength{\rightskip}{0pt plus 5cm}Game\+Asset\+Manager\+::\+Game\+Asset\+Manager (
 \begin{DoxyParamCaption}
 \item[{{\bf Game\+Asset\+Manager} const \&\&}]{the\+\_\+manager}
 \end{DoxyParamCaption}
 )}\label{class_game_asset_manager_a44f6e2fd6b8ff1dd64e5697f1be7386d}
 Unimplemented move constructor -- this unimplemented method violates the C++11 move semantics for \hyperlink{class_game_asset_manager}{Game\+Asset\+Manager}. 
 
-Definition at line 46 of file Game\+Asset\+Manager.\+cc.
+Definition at line 61 of file Game\+Asset\+Manager.\+cc.
 
 
 
 \subsection{Member Function Documentation}
 \hypertarget{class_game_asset_manager_ad3de8ff00d55ba04728b1de8213b2349}{}\index{Game\+Asset\+Manager@{Game\+Asset\+Manager}!Add\+Asset@{Add\+Asset}}
 \index{Add\+Asset@{Add\+Asset}!Game\+Asset\+Manager@{Game\+Asset\+Manager}}
-\subsubsection[{Add\+Asset}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+Asset\+Manager\+::\+Add\+Asset (
+\subsubsection[{Add\+Asset(std\+::shared\+\_\+ptr$<$ Game\+Asset $>$)}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+Asset\+Manager\+::\+Add\+Asset (
 \begin{DoxyParamCaption}
 \item[{std\+::shared\+\_\+ptr$<$ {\bf Game\+Asset} $>$}]{the\+\_\+asset}
 \end{DoxyParamCaption}
 )}\label{class_game_asset_manager_ad3de8ff00d55ba04728b1de8213b2349}
 Adds a \hyperlink{class_game_asset}{Game\+Asset} to the scene graph. 
 
-Definition at line 61 of file Game\+Asset\+Manager.\+cc.
+Definition at line 76 of file Game\+Asset\+Manager.\+cc.
 
 \hypertarget{class_game_asset_manager_a1a1e5c07f941e8d3fda40d9442ac7037}{}\index{Game\+Asset\+Manager@{Game\+Asset\+Manager}!Create\+G\+L\+E\+S\+Shader@{Create\+G\+L\+E\+S\+Shader}}
 \index{Create\+G\+L\+E\+S\+Shader@{Create\+G\+L\+E\+S\+Shader}!Game\+Asset\+Manager@{Game\+Asset\+Manager}}
-\subsubsection[{Create\+G\+L\+E\+S\+Shader}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Game\+Asset\+Manager\+::\+Create\+G\+L\+E\+S\+Shader (
+\subsubsection[{Create\+G\+L\+E\+S\+Shader(\+G\+Lenum, std\+::string \&)}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Game\+Asset\+Manager\+::\+Create\+G\+L\+E\+S\+Shader (
 \begin{DoxyParamCaption}
 \item[{G\+Lenum}]{type, }
 \item[{std\+::string \&}]{shader}
@@ -126,17 +150,17 @@ the G\+L \char`\"{}token\char`\"{} for the requested shader.
 \end{DoxyReturn}
 
 
-Definition at line 110 of file Game\+Asset\+Manager.\+cc.
+Definition at line 129 of file Game\+Asset\+Manager.\+cc.
 
 
 
 Here is the call graph for this function\+:
-% FIG 1
+% FIG 2
 
 
 \hypertarget{class_game_asset_manager_abec45b44a8b35ad2d7d817ba10e0dd8d}{}\index{Game\+Asset\+Manager@{Game\+Asset\+Manager}!Create\+G\+L\+Program@{Create\+G\+L\+Program}}
 \index{Create\+G\+L\+Program@{Create\+G\+L\+Program}!Game\+Asset\+Manager@{Game\+Asset\+Manager}}
-\subsubsection[{Create\+G\+L\+Program}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Game\+Asset\+Manager\+::\+Create\+G\+L\+Program (
+\subsubsection[{Create\+G\+L\+Program(std\+::string \&, std\+::string \&)}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Game\+Asset\+Manager\+::\+Create\+G\+L\+Program (
 \begin{DoxyParamCaption}
 \item[{std\+::string \&}]{vertex\+\_\+shader, }
 \item[{std\+::string \&}]{fragment\+\_\+shader}
@@ -149,39 +173,39 @@ the G\+L \char`\"{}token\char`\"{} referring to the gl program.
 \end{DoxyReturn}
 
 
-Definition at line 81 of file Game\+Asset\+Manager.\+cc.
+Definition at line 100 of file Game\+Asset\+Manager.\+cc.
 
 
 
 Here is the call graph for this function\+:
-% FIG 2
+% FIG 3
 
 
 \hypertarget{class_game_asset_manager_a32837132bd70a9a9ed537323c2d3d886}{}\index{Game\+Asset\+Manager@{Game\+Asset\+Manager}!Draw@{Draw}}
 \index{Draw@{Draw}!Game\+Asset\+Manager@{Game\+Asset\+Manager}}
-\subsubsection[{Draw}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+Asset\+Manager\+::\+Draw (
+\subsubsection[{Draw()}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+Asset\+Manager\+::\+Draw (
 \begin{DoxyParamCaption}
 {}
 \end{DoxyParamCaption}
 )}\label{class_game_asset_manager_a32837132bd70a9a9ed537323c2d3d886}
 Draws each \hyperlink{class_game_asset}{Game\+Asset} in the scene graph. 
 
-Definition at line 68 of file Game\+Asset\+Manager.\+cc.
+Definition at line 83 of file Game\+Asset\+Manager.\+cc.
 
 \hypertarget{class_game_asset_manager_ac72678a4ad5378c685aa6bae84a4e712}{}\index{Game\+Asset\+Manager@{Game\+Asset\+Manager}!operator=@{operator=}}
 \index{operator=@{operator=}!Game\+Asset\+Manager@{Game\+Asset\+Manager}}
-\subsubsection[{operator=}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+Asset\+Manager\+::operator= (
+\subsubsection[{operator=(\+Game\+Asset\+Manager const \&)}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+Asset\+Manager\+::operator= (
 \begin{DoxyParamCaption}
 \item[{{\bf Game\+Asset\+Manager} const \&}]{the\+\_\+manager}
 \end{DoxyParamCaption}
 )}\label{class_game_asset_manager_ac72678a4ad5378c685aa6bae84a4e712}
 Unimplemented assisgnment operator -- violates the expected semantics for assignment in C++11. 
 
-Definition at line 54 of file Game\+Asset\+Manager.\+cc.
+Definition at line 69 of file Game\+Asset\+Manager.\+cc.
 
 \hypertarget{class_game_asset_manager_a23b124a213308a68a882727127601c97}{}\index{Game\+Asset\+Manager@{Game\+Asset\+Manager}!Read\+Shader@{Read\+Shader}}
 \index{Read\+Shader@{Read\+Shader}!Game\+Asset\+Manager@{Game\+Asset\+Manager}}
-\subsubsection[{Read\+Shader}]{\setlength{\rightskip}{0pt plus 5cm}std\+::pair$<$ G\+Lchar $\ast$, G\+Lint $>$ Game\+Asset\+Manager\+::\+Read\+Shader (
+\subsubsection[{Read\+Shader(std\+::string \&)}]{\setlength{\rightskip}{0pt plus 5cm}std\+::pair$<$ G\+Lchar $\ast$, G\+Lint $>$ Game\+Asset\+Manager\+::\+Read\+Shader (
 \begin{DoxyParamCaption}
 \item[{std\+::string \&}]{shader}
 \end{DoxyParamCaption}
@@ -193,24 +217,106 @@ a pair consisting of the shader file contents and a holder for the Open\+G\+L \c
 \end{DoxyReturn}
 
 
-Definition at line 151 of file Game\+Asset\+Manager.\+cc.
+Definition at line 170 of file Game\+Asset\+Manager.\+cc.
+
+\hypertarget{class_game_asset_manager_a2a2eeb7778b2955694cf2dd68f9daefb}{}\index{Game\+Asset\+Manager@{Game\+Asset\+Manager}!Update\+Camera\+Position@{Update\+Camera\+Position}}
+\index{Update\+Camera\+Position@{Update\+Camera\+Position}!Game\+Asset\+Manager@{Game\+Asset\+Manager}}
+\subsubsection[{Update\+Camera\+Position(\+Input, int mouse\+X, int mouse\+Y)}]{\setlength{\rightskip}{0pt plus 5cm}void Game\+Asset\+Manager\+::\+Update\+Camera\+Position (
+\begin{DoxyParamCaption}
+\item[{{\bf Input}}]{input\+\_\+\+Direction, }
+\item[{int}]{mouse\+X, }
+\item[{int}]{mouse\+Y}
+\end{DoxyParamCaption}
+)}\label{class_game_asset_manager_a2a2eeb7778b2955694cf2dd68f9daefb}
+
+
+Definition at line 35 of file Game\+Asset\+Manager.\+cc.
+
+
+
+Here is the call graph for this function\+:
+% FIG 4
+
 
 
 
 \subsection{Member Data Documentation}
+\hypertarget{class_game_asset_manager_af408912d75b4d97d29babc8850ecb8ae}{}\index{Game\+Asset\+Manager@{Game\+Asset\+Manager}!camera@{camera}}
+\index{camera@{camera}!Game\+Asset\+Manager@{Game\+Asset\+Manager}}
+\subsubsection[{camera}]{\setlength{\rightskip}{0pt plus 5cm}{\bf Camera} Game\+Asset\+Manager\+::camera\hspace{0.3cm}{\ttfamily [private]}}\label{class_game_asset_manager_af408912d75b4d97d29babc8850ecb8ae}
+
+
+Definition at line 46 of file Game\+Asset\+Manager.\+h.
+
+\hypertarget{class_game_asset_manager_a011295db68f0413a94700c5aa2778c45}{}\index{Game\+Asset\+Manager@{Game\+Asset\+Manager}!camera\+Position\+X@{camera\+Position\+X}}
+\index{camera\+Position\+X@{camera\+Position\+X}!Game\+Asset\+Manager@{Game\+Asset\+Manager}}
+\subsubsection[{camera\+Position\+X}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Game\+Asset\+Manager\+::camera\+Position\+X\hspace{0.3cm}{\ttfamily [private]}}\label{class_game_asset_manager_a011295db68f0413a94700c5aa2778c45}
+
+
+Definition at line 56 of file Game\+Asset\+Manager.\+h.
+
+\hypertarget{class_game_asset_manager_a076d00cef5f59a5038e168a0cc80420d}{}\index{Game\+Asset\+Manager@{Game\+Asset\+Manager}!camera\+Position\+Z@{camera\+Position\+Z}}
+\index{camera\+Position\+Z@{camera\+Position\+Z}!Game\+Asset\+Manager@{Game\+Asset\+Manager}}
+\subsubsection[{camera\+Position\+Z}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Game\+Asset\+Manager\+::camera\+Position\+Z\hspace{0.3cm}{\ttfamily [private]}}\label{class_game_asset_manager_a076d00cef5f59a5038e168a0cc80420d}
+
+
+Definition at line 57 of file Game\+Asset\+Manager.\+h.
+
 \hypertarget{class_game_asset_manager_a671cddd92f1de4186c582fe0c4297b7d}{}\index{Game\+Asset\+Manager@{Game\+Asset\+Manager}!draw\+\_\+list@{draw\+\_\+list}}
 \index{draw\+\_\+list@{draw\+\_\+list}!Game\+Asset\+Manager@{Game\+Asset\+Manager}}
 \subsubsection[{draw\+\_\+list}]{\setlength{\rightskip}{0pt plus 5cm}std\+::vector$<$std\+::shared\+\_\+ptr$<${\bf Game\+Asset}$>$ $>$ Game\+Asset\+Manager\+::draw\+\_\+list\hspace{0.3cm}{\ttfamily [private]}}\label{class_game_asset_manager_a671cddd92f1de4186c582fe0c4297b7d}
 
 
-Definition at line 38 of file Game\+Asset\+Manager.\+h.
+Definition at line 44 of file Game\+Asset\+Manager.\+h.
 
 \hypertarget{class_game_asset_manager_ad7bab17862e06ca692289f934b40548b}{}\index{Game\+Asset\+Manager@{Game\+Asset\+Manager}!program\+\_\+token@{program\+\_\+token}}
 \index{program\+\_\+token@{program\+\_\+token}!Game\+Asset\+Manager@{Game\+Asset\+Manager}}
 \subsubsection[{program\+\_\+token}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Game\+Asset\+Manager\+::program\+\_\+token\hspace{0.3cm}{\ttfamily [private]}}\label{class_game_asset_manager_ad7bab17862e06ca692289f934b40548b}
 
 
-Definition at line 39 of file Game\+Asset\+Manager.\+h.
+Definition at line 45 of file Game\+Asset\+Manager.\+h.
+
+\hypertarget{class_game_asset_manager_a2bc76e9ac72dcf9490436a59dc3bc752}{}\index{Game\+Asset\+Manager@{Game\+Asset\+Manager}!projection\+Matrix@{projection\+Matrix}}
+\index{projection\+Matrix@{projection\+Matrix}!Game\+Asset\+Manager@{Game\+Asset\+Manager}}
+\subsubsection[{projection\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}glm\+::mat4 Game\+Asset\+Manager\+::projection\+Matrix\hspace{0.3cm}{\ttfamily [private]}}\label{class_game_asset_manager_a2bc76e9ac72dcf9490436a59dc3bc752}
+
+
+Definition at line 54 of file Game\+Asset\+Manager.\+h.
+
+\hypertarget{class_game_asset_manager_aa98eb0fb89a0a39e29be33294b322855}{}\index{Game\+Asset\+Manager@{Game\+Asset\+Manager}!projection\+Matrix\+\_\+link@{projection\+Matrix\+\_\+link}}
+\index{projection\+Matrix\+\_\+link@{projection\+Matrix\+\_\+link}!Game\+Asset\+Manager@{Game\+Asset\+Manager}}
+\subsubsection[{projection\+Matrix\+\_\+link}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Game\+Asset\+Manager\+::projection\+Matrix\+\_\+link\hspace{0.3cm}{\ttfamily [private]}}\label{class_game_asset_manager_aa98eb0fb89a0a39e29be33294b322855}
+
+
+Definition at line 50 of file Game\+Asset\+Manager.\+h.
+
+\hypertarget{class_game_asset_manager_a1f0530749ec3ca5ee7925b2b70e8a8c2}{}\index{Game\+Asset\+Manager@{Game\+Asset\+Manager}!translate\+Matrix@{translate\+Matrix}}
+\index{translate\+Matrix@{translate\+Matrix}!Game\+Asset\+Manager@{Game\+Asset\+Manager}}
+\subsubsection[{translate\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}glm\+::mat4 Game\+Asset\+Manager\+::translate\+Matrix\hspace{0.3cm}{\ttfamily [private]}}\label{class_game_asset_manager_a1f0530749ec3ca5ee7925b2b70e8a8c2}
+
+
+Definition at line 52 of file Game\+Asset\+Manager.\+h.
+
+\hypertarget{class_game_asset_manager_a5e737710573e276ca53c683bc6731a51}{}\index{Game\+Asset\+Manager@{Game\+Asset\+Manager}!translate\+Matrix\+\_\+link@{translate\+Matrix\+\_\+link}}
+\index{translate\+Matrix\+\_\+link@{translate\+Matrix\+\_\+link}!Game\+Asset\+Manager@{Game\+Asset\+Manager}}
+\subsubsection[{translate\+Matrix\+\_\+link}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Game\+Asset\+Manager\+::translate\+Matrix\+\_\+link\hspace{0.3cm}{\ttfamily [private]}}\label{class_game_asset_manager_a5e737710573e276ca53c683bc6731a51}
+
+
+Definition at line 48 of file Game\+Asset\+Manager.\+h.
+
+\hypertarget{class_game_asset_manager_a4e702908c5d7d66e40c676d2c4f7930c}{}\index{Game\+Asset\+Manager@{Game\+Asset\+Manager}!view\+Matrix@{view\+Matrix}}
+\index{view\+Matrix@{view\+Matrix}!Game\+Asset\+Manager@{Game\+Asset\+Manager}}
+\subsubsection[{view\+Matrix}]{\setlength{\rightskip}{0pt plus 5cm}glm\+::mat4 Game\+Asset\+Manager\+::view\+Matrix\hspace{0.3cm}{\ttfamily [private]}}\label{class_game_asset_manager_a4e702908c5d7d66e40c676d2c4f7930c}
+
+
+Definition at line 53 of file Game\+Asset\+Manager.\+h.
+
+\hypertarget{class_game_asset_manager_a71322a65c085d1d296e87aaddc4aea15}{}\index{Game\+Asset\+Manager@{Game\+Asset\+Manager}!view\+Matrix\+\_\+link@{view\+Matrix\+\_\+link}}
+\index{view\+Matrix\+\_\+link@{view\+Matrix\+\_\+link}!Game\+Asset\+Manager@{Game\+Asset\+Manager}}
+\subsubsection[{view\+Matrix\+\_\+link}]{\setlength{\rightskip}{0pt plus 5cm}G\+Luint Game\+Asset\+Manager\+::view\+Matrix\+\_\+link\hspace{0.3cm}{\ttfamily [private]}}\label{class_game_asset_manager_a71322a65c085d1d296e87aaddc4aea15}
+
+
+Definition at line 49 of file Game\+Asset\+Manager.\+h.
 
 
 

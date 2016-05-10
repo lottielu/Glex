@@ -10,6 +10,16 @@ var class_game_asset_manager =
     [ "Draw", "class_game_asset_manager.html#a32837132bd70a9a9ed537323c2d3d886", null ],
     [ "operator=", "class_game_asset_manager.html#ac72678a4ad5378c685aa6bae84a4e712", null ],
     [ "ReadShader", "class_game_asset_manager.html#a23b124a213308a68a882727127601c97", null ],
+    [ "UpdateCameraPosition", "class_game_asset_manager.html#a2a2eeb7778b2955694cf2dd68f9daefb", null ],
+    [ "camera", "class_game_asset_manager.html#af408912d75b4d97d29babc8850ecb8ae", null ],
+    [ "cameraPositionX", "class_game_asset_manager.html#a011295db68f0413a94700c5aa2778c45", null ],
+    [ "cameraPositionZ", "class_game_asset_manager.html#a076d00cef5f59a5038e168a0cc80420d", null ],
     [ "draw_list", "class_game_asset_manager.html#a671cddd92f1de4186c582fe0c4297b7d", null ],
-    [ "program_token", "class_game_asset_manager.html#ad7bab17862e06ca692289f934b40548b", null ]
+    [ "program_token", "class_game_asset_manager.html#ad7bab17862e06ca692289f934b40548b", null ],
+    [ "projectionMatrix", "class_game_asset_manager.html#a2bc76e9ac72dcf9490436a59dc3bc752", null ],
+    [ "projectionMatrix_link", "class_game_asset_manager.html#aa98eb0fb89a0a39e29be33294b322855", null ],
+    [ "translateMatrix", "class_game_asset_manager.html#a1f0530749ec3ca5ee7925b2b70e8a8c2", null ],
+    [ "translateMatrix_link", "class_game_asset_manager.html#a5e737710573e276ca53c683bc6731a51", null ],
+    [ "viewMatrix", "class_game_asset_manager.html#a4e702908c5d7d66e40c676d2c4f7930c", null ],
+    [ "viewMatrix_link", "class_game_asset_manager.html#a71322a65c085d1d296e87aaddc4aea15", null ]
 ];

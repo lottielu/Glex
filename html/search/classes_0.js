@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['cubeasset',['CubeAsset',['../class_cube_asset.html',1,'']]]
+  ['boundingbox',['BoundingBox',['../classstd_1_1_bounding_box.html',1,'std']]]
 ];

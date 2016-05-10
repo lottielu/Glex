@@ -1,7 +1,10 @@
 #include "Camera.h"
 #include <glm/ext.hpp>
 //An attempt based on the tutorial www.opengl-tutorial.org/beginners-tutorials/tutorial-6-keyboard-and-mouse/
-
+/**
+ * Controls the camera movement within the block world
+ * Keys used to move around and mouse used to turn
+ */
 
 Camera::Camera()
 {

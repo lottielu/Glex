@@ -1,0 +1,143 @@
+\hypertarget{class_camera}{}\section{Camera Class Reference}
+\label{class_camera}\index{Camera@{Camera}}
+
+
+{\ttfamily \#include $<$Camera.\+h$>$}
+
+\subsection*{Public Member Functions}
+\begin{DoxyCompactItemize}
+\item 
+\hyperlink{class_camera_a01f94c3543f56ede7af49dc778f19331}{Camera} ()
+\item 
+glm\+::mat4 \hyperlink{class_camera_ac0f7e4d6a41e3b425eed9cfa392a9508}{Update\+Camera\+Position} (\hyperlink{common_8h_a080a822f0093973313bd644e517a5090}{Input} input\+\_\+\+Direction, int mouse\+X, int mouse\+Y)
+\end{DoxyCompactItemize}
+\subsection*{Private Attributes}
+\begin{DoxyCompactItemize}
+\item 
+glm\+::vec3 \hyperlink{class_camera_aca1334c1a10c3a1fe84a2979b205ff9a}{camera\+Position}
+\item 
+glm\+::vec3 \hyperlink{class_camera_aa91491698db51f70c62199d8c2213514}{direction}
+\item 
+glm\+::vec3 \hyperlink{class_camera_aebffcc6289dd99df7554b18d00a81161}{right}
+\item 
+glm\+::vec3 \hyperlink{class_camera_a3fe5f351380fb118ffc600591769f049}{up}
+\item 
+float \hyperlink{class_camera_aad9d573147be409e929251eca0bea339}{horizontal\+Angle}
+\item 
+float \hyperlink{class_camera_a6582a5068d81b8de7a7fc67e5143e628}{vertical\+Angle}
+\item 
+float \hyperlink{class_camera_a38f42e9b04d2180f267af1bdd5b87216}{mouse\+Delta\+X}
+\item 
+float \hyperlink{class_camera_a65944911597dcfb60e21300ed8c62305}{mouse\+Delta\+Y}
+\item 
+float \hyperlink{class_camera_a0ca21737f5a9fb6a9fda61e7e92c9a5e}{camera\+Movement\+Speed}
+\end{DoxyCompactItemize}
+
+
+\subsection{Detailed Description}
+$<$ include the \hyperlink{common_8h}{common.\+h} file. A reasonable attempt at implementing a camera interface. Purpose is to change camera position using uniform variables and acceptance of keyboard input. An attempt based on the tutorial www.\+opengl-\/tutorial.\+org/beginners-\/tutorials/tutorial-\/6-\/keyboard-\/and-\/mouse/ 
+
+Definition at line 13 of file Camera.\+h.
+
+
+
+\subsection{Constructor \& Destructor Documentation}
+\hypertarget{class_camera_a01f94c3543f56ede7af49dc778f19331}{}\index{Camera@{Camera}!Camera@{Camera}}
+\index{Camera@{Camera}!Camera@{Camera}}
+\subsubsection[{Camera()}]{\setlength{\rightskip}{0pt plus 5cm}Camera\+::\+Camera (
+\begin{DoxyParamCaption}
+{}
+\end{DoxyParamCaption}
+)}\label{class_camera_a01f94c3543f56ede7af49dc778f19331}
+Controls the camera movement within the block world Keys used to move around and mouse used to turn 
+
+Definition at line 9 of file Camera.\+cpp.
+
+
+
+\subsection{Member Function Documentation}
+\hypertarget{class_camera_ac0f7e4d6a41e3b425eed9cfa392a9508}{}\index{Camera@{Camera}!Update\+Camera\+Position@{Update\+Camera\+Position}}
+\index{Update\+Camera\+Position@{Update\+Camera\+Position}!Camera@{Camera}}
+\subsubsection[{Update\+Camera\+Position(\+Input input\+\_\+\+Direction, int mouse\+X, int mouse\+Y)}]{\setlength{\rightskip}{0pt plus 5cm}glm\+::mat4 Camera\+::\+Update\+Camera\+Position (
+\begin{DoxyParamCaption}
+\item[{{\bf Input}}]{input\+\_\+\+Direction, }
+\item[{int}]{mouse\+X, }
+\item[{int}]{mouse\+Y}
+\end{DoxyParamCaption}
+)}\label{class_camera_ac0f7e4d6a41e3b425eed9cfa392a9508}
+
+
+Definition at line 27 of file Camera.\+cpp.
+
+
+
+\subsection{Member Data Documentation}
+\hypertarget{class_camera_a0ca21737f5a9fb6a9fda61e7e92c9a5e}{}\index{Camera@{Camera}!camera\+Movement\+Speed@{camera\+Movement\+Speed}}
+\index{camera\+Movement\+Speed@{camera\+Movement\+Speed}!Camera@{Camera}}
+\subsubsection[{camera\+Movement\+Speed}]{\setlength{\rightskip}{0pt plus 5cm}float Camera\+::camera\+Movement\+Speed\hspace{0.3cm}{\ttfamily [private]}}\label{class_camera_a0ca21737f5a9fb6a9fda61e7e92c9a5e}
+
+
+Definition at line 33 of file Camera.\+h.
+
+\hypertarget{class_camera_aca1334c1a10c3a1fe84a2979b205ff9a}{}\index{Camera@{Camera}!camera\+Position@{camera\+Position}}
+\index{camera\+Position@{camera\+Position}!Camera@{Camera}}
+\subsubsection[{camera\+Position}]{\setlength{\rightskip}{0pt plus 5cm}glm\+::vec3 Camera\+::camera\+Position\hspace{0.3cm}{\ttfamily [private]}}\label{class_camera_aca1334c1a10c3a1fe84a2979b205ff9a}
+
+
+Definition at line 22 of file Camera.\+h.
+
+\hypertarget{class_camera_aa91491698db51f70c62199d8c2213514}{}\index{Camera@{Camera}!direction@{direction}}
+\index{direction@{direction}!Camera@{Camera}}
+\subsubsection[{direction}]{\setlength{\rightskip}{0pt plus 5cm}glm\+::vec3 Camera\+::direction\hspace{0.3cm}{\ttfamily [private]}}\label{class_camera_aa91491698db51f70c62199d8c2213514}
+
+
+Definition at line 23 of file Camera.\+h.
+
+\hypertarget{class_camera_aad9d573147be409e929251eca0bea339}{}\index{Camera@{Camera}!horizontal\+Angle@{horizontal\+Angle}}
+\index{horizontal\+Angle@{horizontal\+Angle}!Camera@{Camera}}
+\subsubsection[{horizontal\+Angle}]{\setlength{\rightskip}{0pt plus 5cm}float Camera\+::horizontal\+Angle\hspace{0.3cm}{\ttfamily [private]}}\label{class_camera_aad9d573147be409e929251eca0bea339}
+
+
+Definition at line 27 of file Camera.\+h.
+
+\hypertarget{class_camera_a38f42e9b04d2180f267af1bdd5b87216}{}\index{Camera@{Camera}!mouse\+Delta\+X@{mouse\+Delta\+X}}
+\index{mouse\+Delta\+X@{mouse\+Delta\+X}!Camera@{Camera}}
+\subsubsection[{mouse\+Delta\+X}]{\setlength{\rightskip}{0pt plus 5cm}float Camera\+::mouse\+Delta\+X\hspace{0.3cm}{\ttfamily [private]}}\label{class_camera_a38f42e9b04d2180f267af1bdd5b87216}
+
+
+Definition at line 30 of file Camera.\+h.
+
+\hypertarget{class_camera_a65944911597dcfb60e21300ed8c62305}{}\index{Camera@{Camera}!mouse\+Delta\+Y@{mouse\+Delta\+Y}}
+\index{mouse\+Delta\+Y@{mouse\+Delta\+Y}!Camera@{Camera}}
+\subsubsection[{mouse\+Delta\+Y}]{\setlength{\rightskip}{0pt plus 5cm}float Camera\+::mouse\+Delta\+Y\hspace{0.3cm}{\ttfamily [private]}}\label{class_camera_a65944911597dcfb60e21300ed8c62305}
+
+
+Definition at line 31 of file Camera.\+h.
+
+\hypertarget{class_camera_aebffcc6289dd99df7554b18d00a81161}{}\index{Camera@{Camera}!right@{right}}
+\index{right@{right}!Camera@{Camera}}
+\subsubsection[{right}]{\setlength{\rightskip}{0pt plus 5cm}glm\+::vec3 Camera\+::right\hspace{0.3cm}{\ttfamily [private]}}\label{class_camera_aebffcc6289dd99df7554b18d00a81161}
+
+
+Definition at line 24 of file Camera.\+h.
+
+\hypertarget{class_camera_a3fe5f351380fb118ffc600591769f049}{}\index{Camera@{Camera}!up@{up}}
+\index{up@{up}!Camera@{Camera}}
+\subsubsection[{up}]{\setlength{\rightskip}{0pt plus 5cm}glm\+::vec3 Camera\+::up\hspace{0.3cm}{\ttfamily [private]}}\label{class_camera_a3fe5f351380fb118ffc600591769f049}
+
+
+Definition at line 25 of file Camera.\+h.
+
+\hypertarget{class_camera_a6582a5068d81b8de7a7fc67e5143e628}{}\index{Camera@{Camera}!vertical\+Angle@{vertical\+Angle}}
+\index{vertical\+Angle@{vertical\+Angle}!Camera@{Camera}}
+\subsubsection[{vertical\+Angle}]{\setlength{\rightskip}{0pt plus 5cm}float Camera\+::vertical\+Angle\hspace{0.3cm}{\ttfamily [private]}}\label{class_camera_a6582a5068d81b8de7a7fc67e5143e628}
+
+
+Definition at line 28 of file Camera.\+h.
+
+
+
+The documentation for this class was generated from the following files\+:\begin{DoxyCompactItemize}
+\item 
+src/\hyperlink{_camera_8h}{Camera.\+h}\item 
+src/\hyperlink{_camera_8cpp}{Camera.\+cpp}\end{DoxyCompactItemize}

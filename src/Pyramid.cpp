@@ -1,7 +1,10 @@
 #include "Pyramid.h"
 #include "Camera.h"
 #include <glm/ext.hpp>
-
+/**
+ * Pyramid asset class
+ * Controls all aspect of each pyramid added
+ */
 Pyramid::Pyramid(float x, float y, float z) : model_matrix(glm::mat4(1.0))
 {
   // model coordinates, origin at centre.
@@ -120,6 +123,9 @@ void Pyramid::Draw(GLuint program_token) {
   glUseProgram(program_token);
   checkGLError();
 
+  /**
+   * animation matrix to control the rotation of pyramids
+   */
   GLuint animationMatrix = glGetUniformLocation(program_token, "animationMatrix");
   angle += 0.002f;
   animate = glm::rotate(glm::mat4(1.0f),angle,glm::vec3(0,0.5,0));

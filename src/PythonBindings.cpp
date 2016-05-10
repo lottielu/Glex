@@ -5,6 +5,9 @@
 #include "Common.h"
 
 usng namespace boost::python;
+/**
+ * Class to control python bindings
+ */
 
 PythonBindings::PythonBindings()
 {

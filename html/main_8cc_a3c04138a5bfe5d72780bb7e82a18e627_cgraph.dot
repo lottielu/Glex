@@ -9,7 +9,7 @@ digraph "main"
   Node1 -> Node3 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
   Node3 [label="InitWorld",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cc.html#acab7ade71cf38099442ca5df2495223d"];
   Node1 -> Node4 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node4 [label="tick",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cc.html#a70eaa727262f633037c3f4b7d3ff24c2"];
+  Node4 [label="Draw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cc.html#afd34c13fc4f409851ffc0989c13dd287"];
   Node1 -> Node5 [color="midnightblue",fontsize="10",style="solid",fontname="Helvetica"];
-  Node5 [label="Draw",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cc.html#afd34c13fc4f409851ffc0989c13dd287"];
+  Node5 [label="tick",height=0.2,width=0.4,color="black", fillcolor="white", style="filled",URL="$main_8cc.html#a70eaa727262f633037c3f4b7d3ff24c2"];
 }

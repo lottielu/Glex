@@ -32,6 +32,9 @@ class GameWorld {
   void Draw();
   void LibBindTest();
 
+  /**
+   * updates the camera position based on input and mouse position
+   */
   void UpdateCameraPosition(Input, int mouseX, int mouseY);
  private:
   std::shared_ptr<GameAssetManager> asset_manager;
